@@ -1,4 +1,4 @@
-package org.radsec.components;
+package org.example.components;
 
 import net.serenitybdd.core.pages.PageComponent;
 

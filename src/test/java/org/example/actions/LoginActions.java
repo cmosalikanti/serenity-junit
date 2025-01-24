@@ -1,4 +1,4 @@
-package org.radsec.actions;
+package org.example.actions;
 
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.core.steps.UIInteractions;

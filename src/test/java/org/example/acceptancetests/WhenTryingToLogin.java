@@ -1,13 +1,13 @@
-package org.radsec.acceptancetests;
+package org.example.acceptancetests;
 
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.radsec.actions.LoginActions;
-import org.radsec.actions.NavigateActions;
-import org.radsec.components.Inventory;
-import org.radsec.components.LoginComponent;
+import org.example.actions.LoginActions;
+import org.example.actions.NavigateActions;
+import org.example.components.Inventory;
+import org.example.components.LoginComponent;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
