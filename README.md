@@ -8,7 +8,7 @@
 4. 'maven-failsafe-plugin' for running the acceptance tests
 5. Maven wrapper so prior maven set-up is not needed
 
-## How to run
+## How to run ?
 1.  Clone the project
 2.  Run the below command
 
