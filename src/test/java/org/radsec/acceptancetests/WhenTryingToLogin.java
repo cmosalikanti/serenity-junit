@@ -7,6 +7,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.radsec.actions.LoginActions;
 import org.radsec.actions.NavigateActions;
 import org.radsec.components.Inventory;
+import org.radsec.components.LoginComponent;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,6 +16,7 @@ public class WhenTryingToLogin {
     NavigateActions navigate;
     LoginActions login;
     Inventory inventory;
+    LoginComponent loginComponent;
 
     @Test
     void shouldBeAbleToLogin() {
@@ -26,4 +28,16 @@ public class WhenTryingToLogin {
         Serenity.reportThat("Should be able to login.",
                 () ->  assertThat(inventory.isInventoryListDisplayed()).isTrue());
     }
+
+    @Test
+    void shouldNotBeAbleToLogin() {
+        navigate.openLoginPage();
+        login.enterUsername("standard_user");
+        login.enterPassword("secret_sauc");
+        login.clickLoginButton();
+
+        Serenity.reportThat("Should not be able to login for incorrect credentials.",
+                () ->  assertThat(loginComponent.isErrorMessageContainerDisplayed()).isTrue());
+    }
+
 }
