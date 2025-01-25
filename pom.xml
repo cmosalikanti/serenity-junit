@@ -34,6 +34,7 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.11</version>
         </dependency>
+        <!-- Using AssertJ for assertions-->
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -79,6 +80,8 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
+
+            <!-- We use the below plugin to generate the Serenity reports whenever we run 'mvn verify'-->
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
